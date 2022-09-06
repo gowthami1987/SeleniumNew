@@ -6,14 +6,21 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class GroupEx {
+    WebDriver driver;
+
     @Test(groups="Regression")
     public void testCaseOne()
     {
+        WebDriverManager.chromedriver().setup();
+        driver=new ChromeDriver();
+        driver.get("http://demo.guru99.com/test/login.html");
         System.out.println("Im in testCaseOne - And in Regression Group");
+        driver.close();
     }
     @Test(groups="Regression")
     public void testCaseTwo(){
-        System.out.println("Im in testCaseTwo - And in Regression Group");
+        String s= driver.getTitle();
+        System.out.println(s);
     }
     @Test(groups="Smoke Test")
     public void testCaseThree(){
