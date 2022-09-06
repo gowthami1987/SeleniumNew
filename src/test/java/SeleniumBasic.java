@@ -42,7 +42,7 @@ WebDriver driver;
     public void test3()
     {
 try {
-    Thread.sleep(20000);
+    Thread.sleep(10000);
     driver.close();
 }
     catch (InterruptedException e){}}
