@@ -18,7 +18,7 @@ public class ParameterByDataprovider {
     public void setup(){
        WebDriverManager.chromedriver().setup();
        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         driver.get("https://google.com");
     }
 
@@ -28,7 +28,7 @@ public class ParameterByDataprovider {
             WebElement searchText = driver.findElement(By.name("q"));
             searchText.sendKeys(searchKey);
             System.out.println("Welcome ->"+author+" Your search key is->"+searchKey);
-            Thread.sleep(3000);
+            Thread.sleep(10000);
             String testValue = searchText.getAttribute("value");
             System.out.println(testValue +"::::"+searchKey);
             searchText.clear();
