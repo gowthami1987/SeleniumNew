@@ -2,13 +2,8 @@
 
 <suite name="Sample Suite">
     <test name="testing">
-        <groups>
-            <run>
-                <include name="Regression"/>
-            </run>
-        </groups>
         <classes>
-            <class name="GroupEx" />
+            <class name="TestGuru99MultipleSession" />
         </classes>
     </test>
 </suite>
