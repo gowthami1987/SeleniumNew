@@ -1,9 +1,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Sample Suite">
-    <test name="testing">
+<suite thread-count="1" verbose="1" name="Gmail Suite" annotations="JDK" parallel="tests">
+    <test name="Multiplesession">
         <classes>
             <class name="TestGuru99MultipleSession" />
         </classes>
+    </test>
+    <test name="basic">
+        <classes>
+        <class name="SeleniumBasic"></class>
+    </classes>
     </test>
 </suite>
